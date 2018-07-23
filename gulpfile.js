@@ -9,7 +9,8 @@ var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
 var notify = require("gulp-notify");
 
-// Funcion lanzar servidor, escuchar sass y actualizar navegador
+
+// Funcion lanzar servidor. Escucha sass. Actualiza navegador. Comprime JS
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
@@ -22,6 +23,7 @@ gulp.task('serve', ['sass'], function() {
 });
 
 
+
 // Función autoprefixer
 gulp.task('autoprefixer', function() {
     gulp.src('src/scss/**/*.scss')
@@ -29,7 +31,8 @@ gulp.task('autoprefixer', function() {
 });
 
 
-// Función sass
+
+// Función sass. Autoprefixer. Carpeta de destino. Actualiza el navegador. Minifica CSS. Renombra el fichero de compilación de CSS. Carpeta de destino
 gulp.task('sass', function(){
 	return gulp.src('src/scss/**/*.scss')
 		.pipe(sass())
@@ -45,15 +48,14 @@ gulp.task('sass', function(){
         //.pipe(notify("CSS - Sass compilado"));
 });
 
-// Función watch para ejecutar sass 
-//La tengo metida ya en mi función de serve y no me hace falta
+
+// Función watch para ejecutar sass (la tengo metida ya en mi función de serve y no me hace falta)
 //gulp.task('watch', function(){
 //	gulp.watch('src/scss/**/*.scss', ['sass']);
 //})
 
 
-
-// Función para minificar archivos .js
+// Función para minificar archivos .js. Notifica cuando la tarea se realiza
 gulp.task('jscompress', function (cb) {
   pump([
         gulp.src('src/js/*.js'),
