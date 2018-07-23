@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
-var pump = require('pump');
 var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
 var imagemin = require('gulp-imagemin');
@@ -11,7 +10,7 @@ var notify = require("gulp-notify");
 
 
 // Funcion lanzar servidor. Escucha sass. Actualiza navegador. Comprime JS
-gulp.task('serve', ['sass'], function() {
+gulp.task('default', ['sass', 'jscompress'], function() {
 
     browserSync.init({
         server: "./"
@@ -19,17 +18,8 @@ gulp.task('serve', ['sass'], function() {
 
     gulp.watch("src/scss/**/*.scss", ['sass']);
     gulp.watch("*.html").on('change', browserSync.reload);
-    gulp.watch("src/js/*.js", ['jscompress']);
+    gulp.watch("src/js/*.js", ['jscompress']).on('change', browserSync.reload);
 });
-
-
-
-// Función autoprefixer
-gulp.task('autoprefixer', function() {
-    gulp.src('src/scss/**/*.scss')
-        .pipe(gulp.dest('dist/css'))
-});
-
 
 
 // Función sass. Autoprefixer. Carpeta de destino. Actualiza el navegador. Minifica CSS. Renombra el fichero de compilación de CSS. Carpeta de destino
@@ -56,21 +46,17 @@ gulp.task('sass', function(){
 
 
 // Función para minificar archivos .js. Notifica cuando la tarea se realiza
-gulp.task('jscompress', function (cb) {
-  pump([
-        gulp.src('src/js/*.js'),
-        uglify(),
-        rename({suffix: '.min'}),
-        gulp.dest('dist/js')
-    ],
-    cb
-  )
-  .pipe(notify("JS - JS comprimido"));
+gulp.task('jscompress', function() {
+    gulp.src('src/js/*.js')
+        .pipe(uglify())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(notify("JS - JS comprimido"));
 });
 
 
 // Función para optimizar imágenes
-gulp.task('optimize', function() {
+gulp.task('imageoptimizer', function() {
     gulp.src('src/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'))
