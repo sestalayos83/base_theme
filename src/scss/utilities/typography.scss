@@ -1,0 +1,69 @@
+// -------- Typographys --------
+
+/* --------------How to use ---------------- */
+//    .display-1 
+/* ---------------------------------------- */
+
+h1,
+.heading-1 {
+  @include font-size($h1-font-size);
+}
+
+h2,
+.heading-2 {
+  @include font-size($h2-font-size);
+  margin-bottom: $spacer-5;
+}
+
+h3,
+.heading-3 {
+  @include font-size($h3-font-size);
+  margin-bottom: $spacer-8;
+}
+
+h4,
+.heading-4 {
+  @include font-size($h4-font-size);
+}
+
+h5,
+.heading-5 {
+  @include font-size($h5-font-size);
+  margin-bottom: $spacer-4;
+}
+
+h6,
+.heading-6 {
+  @include font-size($h6-font-size);
+  margin-bottom: $spacer-3;
+}
+
+.body-base {
+  @include font-size($body-font-size);
+  margin-bottom: $spacer-6;
+}
+
+
+// Text weights
+.regular { @include regular; }
+.light { @include light; }
+.bold { @include bold; }
+.italic { font-style: italic; }
+
+
+// Heading utilities
+#{headings(3,6)} {
+  font-weight: $fw-400;
+}
+
+// Text alignments
+// TO DO: Cuando se definan las tipos, deberíamos de hacer un mapeo de los alignments de los textos
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+.text-md-center { // TO DO: esta regla desaparecerá cuando se definan las tipos
+  @include media(media-md) {
+    text-align: center;
+  }
+}

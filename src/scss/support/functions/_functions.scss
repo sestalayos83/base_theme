@@ -1,0 +1,36 @@
+// -------- Functions ------------
+
+// Function to transform px in rems
+
+/* --------------How to use---------------- */
+//    font-size: rem(12);
+//    border: rem(1) solid $primary-base;
+//    width: rem(12);
+/* ---------------------------------------- */
+
+@function rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+
+// Function to shade colors
+
+/* --------------How to use---------------- */
+//    background-color: shade($primary-base75, 25%);
+/* ---------------------------------------- */
+
+@function shade($color, $percentage) {
+  @return mix($global-dark, $color, $percentage);
+}
+
+
+// Function to tint colors
+
+/* --------------How to use---------------- */
+//    background-color: tint($primary-base50, 65%);
+/* ---------------------------------------- */
+
+@function tint($color, $percentage) {
+  @return mix($global-light, $color, $percentage);
+}

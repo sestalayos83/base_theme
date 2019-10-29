@@ -1,0 +1,36 @@
+// -------- Color theming variables --------
+
+// Use this variables when needed to add a background-color,
+// color or border color to any element. Never use hexadecimals.
+
+/* --------------How to use ---------------- */
+//    background-color: $primary-base50;
+//    color: $text-base;
+//    border-color: $primary-base;
+/* ---------------------------------------- */
+
+// Primary colors
+$primary-base:   #4E26A6 !default;
+
+
+// Neutral colors
+$neutral-base:   #222222 !default;
+$neutral-base90: #383838 !default;
+$neutral-base80: #4E4E4E !default;
+$neutral-base70: #646464 !default;
+$neutral-base60: #7A7A7A !default;
+$neutral-base50: #B7B7B7 !default;
+$neutral-base40: #CCCCCC !default;
+$neutral-base30: #E6E6E6 !default;
+$neutral-base20: #F3F3F3 !default;
+$neutral-base10: #FAFAFA !default;
+
+
+// Global colors
+$global-dark:      #000000 !default;
+$global-light:     #FFFFFF !default;
+$global-transparent: transparent;
+
+
+// Text colors
+$text-base:   #2F3343 !default;

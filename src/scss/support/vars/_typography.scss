@@ -1,0 +1,71 @@
+// -------- Typography variables --------
+
+// Google Font variable
+$google-font: "https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&subset=latin";
+
+// Theme Fonts variables
+
+/* --------------How to use---------------- */
+//     font-family: $font-family-base;
+/* ---------------------------------------- */
+
+$font-family-base: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-size-base: rem(16);
+$line-height-base: 1.5;
+
+// Font weight variables
+
+/* --------------How to use---------------- */
+//     font-weight: $fw-700;
+/* ---------------------------------------- */
+
+$fw-300: 300;
+$fw-400: 400;
+$fw-700: 700;
+
+// Font size variables
+
+/* --------------How to use---------------- */
+//     @include font-size($h5-font-size);
+/* ---------------------------------------- */
+
+$h1-font-size: (
+  xs: (rem(36), 1.2),
+  md: (rem(40), 1.2),
+  lg: (rem(58), 1.2)
+);
+
+$h2-font-size: (
+  xs: (rem(32), 1.2),
+  md: (rem(32), 1.2),
+  lg: (rem(46), 1.2)
+);
+
+$h3-font-size: (
+  xs: (rem(28), 1.2),
+  md: (rem(28), 1.2),
+  lg: (rem(32), 1.2)
+);
+
+$h4-font-size: (
+  xs: (rem(24), 1.2),
+  md: (rem(24), 1.2),
+  lg: (rem(28), 1.2)
+);
+
+$h5-font-size: (
+  xs: (rem(20), 1.2),
+  md: (rem(20), 1.2),
+  lg: (rem(24), 1.2)
+);
+
+$h6-font-size: (
+  xs: (rem(18), 1.5),
+  md: (rem(18), 1.5),
+  lg: (rem(20), 1.5)
+);
+
+$body-font-size: (
+  default: (rem(16), 1.5)
+);
+

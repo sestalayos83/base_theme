@@ -1,0 +1,35 @@
+// -------- Spacing system variables --------
+
+//These are the spacing defined in the style guidelines
+
+/* --------------How to use---------------- */
+//     margin: $spacer-6;
+//     padding-right: $spacer-9;
+/* ---------------------------------------- */
+
+$spacer-1: rem(2);
+$spacer-2: rem(4);
+$spacer-3: rem(8);
+$spacer-4: rem(16);
+$spacer-5: rem(24);
+$spacer-6: rem(32);
+$spacer-7: rem(40);
+$spacer-8: rem(48);
+$spacer-9: rem(64);
+$spacer-10: rem(96);
+$spacer-11: rem(160);
+
+$spacers: (
+  0,
+  $spacer-1,
+  $spacer-2,
+  $spacer-3,
+  $spacer-4,
+  $spacer-5,
+  $spacer-6,
+  $spacer-7,
+  $spacer-8,
+  $spacer-9,
+  $spacer-10,
+  $spacer-11
+) !default;
