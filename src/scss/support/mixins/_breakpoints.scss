@@ -19,6 +19,7 @@
   }
 }
 
+
 // Minimum breakpoint width. Null for the smallest (first) breakpoint.
 //
 //    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
@@ -53,6 +54,7 @@
     @content;
   }
 }
+
 
 // Mixin for easy to use mediaqueries
 /* --------------How to use---------------- */

@@ -4,13 +4,17 @@
 // color or border color to any element. Never use hexadecimals.
 
 /* --------------How to use ---------------- */
-//    background-color: $primary-base50;
-//    color: $text-base;
-//    border-color: $primary-base;
+//    background-color: $ui-0150;
+//    color: $text-01;
+//    border-color: $ui-01;
 /* ---------------------------------------- */
 
-// Primary colors
-$primary-base:   #4E26A6 !default;
+// UI colors
+$ui-01: #6d1b2c !default;
+$ui-02: #BC596F !default;
+$ui-03: #EAB4C5 !default;
+$ui-04: #F1DEE2 !default;
+
 
 
 // Neutral colors
@@ -33,4 +37,4 @@ $global-transparent: transparent;
 
 
 // Text colors
-$text-base:   #2F3343 !default;
+$text-01:   #3F3E43 !default;

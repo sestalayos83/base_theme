@@ -1,5 +1,6 @@
 // -------- Display utilities --------
 
-// General show/hide
-.d-none { display: none; }
-.d-block { display: block; }
+.d-none   { display: none; }
+.d-inline { display: inline; }
+.d-block  { display: block; }
+.d-flex    { display: flex; }

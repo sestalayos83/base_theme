@@ -1,7 +1,7 @@
 // -------- Typographys --------
 
 /* --------------How to use ---------------- */
-//    .display-1 
+//    .heading-1 
 /* ---------------------------------------- */
 
 h1,
@@ -43,27 +43,26 @@ h6,
   margin-bottom: $spacer-6;
 }
 
+.other {
+  @include font-size($other-font-size);
+}
+
 
 // Text weights
 .regular { @include regular; }
-.light { @include light; }
-.bold { @include bold; }
-.italic { font-style: italic; }
+.light   { @include light; }
+.bold    { @include bold; }
+.italic  { font-style: italic; }
+
+
+// Text alignments
+.text-right  { text-align: right; }
+.text-left   { text-align: left; }
+.text-center { text-align: center; }
 
 
 // Heading utilities
 #{headings(3,6)} {
-  font-weight: $fw-400;
+  @include regular;
 }
 
-// Text alignments
-// TO DO: Cuando se definan las tipos, deberíamos de hacer un mapeo de los alignments de los textos
-.text-right { text-align: right; }
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-
-.text-md-center { // TO DO: esta regla desaparecerá cuando se definan las tipos
-  @include media(media-md) {
-    text-align: center;
-  }
-}

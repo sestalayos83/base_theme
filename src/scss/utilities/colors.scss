@@ -1,12 +1,16 @@
 // -------- Color utilities --------
 
 /* --------------How to use ---------------- */
-//    .bg-primary-base
-//    .clr-text-base
+//    .bg-ui-01
+//    .clr-text-01
 /* ---------------------------------------- */
 
 //Background colors
-.bg-primary-base   { background-color: $primary-base; }
+.bg-ui-01   { background-color: $ui-01; }
+.bg-ui-02   { background-color: $ui-02; }
+.bg-ui-03   { background-color: $ui-03; }
+.bg-ui-04   { background-color: $ui-04; }
+
 
 //Text colors
-.clr-text-base   { color: $text-base; fill: $text-base; }
+.clr-text-01   { color: $text-01; fill: $text-01; }

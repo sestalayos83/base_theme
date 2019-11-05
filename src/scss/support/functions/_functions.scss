@@ -4,7 +4,7 @@
 
 /* --------------How to use---------------- */
 //    font-size: rem(12);
-//    border: rem(1) solid $primary-base;
+//    border: rem(1) solid $ui-01;
 //    width: rem(12);
 /* ---------------------------------------- */
 
@@ -17,7 +17,7 @@
 // Function to shade colors
 
 /* --------------How to use---------------- */
-//    background-color: shade($primary-base75, 25%);
+//    background-color: shade($ui-01, 25%);
 /* ---------------------------------------- */
 
 @function shade($color, $percentage) {
@@ -28,7 +28,7 @@
 // Function to tint colors
 
 /* --------------How to use---------------- */
-//    background-color: tint($primary-base50, 65%);
+//    background-color: tint($ui-01, 65%);
 /* ---------------------------------------- */
 
 @function tint($color, $percentage) {

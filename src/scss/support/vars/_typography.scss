@@ -10,8 +10,11 @@ $google-font: "https://fonts.googleapis.com/css?family=Lato:300,400,700,300itali
 /* ---------------------------------------- */
 
 $font-family-base: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family-light: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+$font-family-bold: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
 $font-size-base: rem(16);
 $line-height-base: 1.5;
+
 
 // Font weight variables
 
@@ -22,6 +25,7 @@ $line-height-base: 1.5;
 $fw-300: 300;
 $fw-400: 400;
 $fw-700: 700;
+
 
 // Font size variables
 
@@ -69,3 +73,8 @@ $body-font-size: (
   default: (rem(16), 1.5)
 );
 
+$other-font-size: (
+  xs: (rem(12), 1.5),
+  md: (rem(10), 1.5),
+  lg: (rem(10), 1.5)
+);

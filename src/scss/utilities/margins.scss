@@ -18,16 +18,11 @@
       $size: #{nth($spacers, $i)}; // xs, sm, md, lg, xl
       $scale: #{$i - 1};  // 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 
-      // Set a #{$size} margin to all sides
-      .m-#{$breakpoint}-#{$scale} { margin: #{$size}; }
-      // Set a #{$size} margin on the top
-      .mt-#{$breakpoint}-#{$scale} { margin-top: #{$size}; }
-      // Set a #{$size} margin on the right
-      .mr-#{$breakpoint}-#{$scale} { margin-right: #{$size}; }
-      // Set a #{$size} margin on the bottom
-      .mb-#{$breakpoint}-#{$scale} { margin-bottom: #{$size}; }
-      // Set a #{$size} margin on the left
-      .ml-#{$breakpoint}-#{$scale} { margin-left: #{$size}; }
+      .m-#{$breakpoint}-#{$scale}  { margin: #{$size}; }         // Set a #{$size} margin to all sides
+      .mt-#{$breakpoint}-#{$scale} { margin-top: #{$size}; }     // Set a #{$size} margin on the top
+      .mr-#{$breakpoint}-#{$scale} { margin-right: #{$size}; }   // Set a #{$size} margin on the right
+      .mb-#{$breakpoint}-#{$scale} { margin-bottom: #{$size}; }  // Set a #{$size} margin on the bottom
+      .ml-#{$breakpoint}-#{$scale} { margin-left: #{$size}; }    // Set a #{$size} margin on the left
     }
   }
 }
@@ -35,6 +30,6 @@
 .m-center { margin: 0 auto; }
 
 .mx-auto {
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
 }

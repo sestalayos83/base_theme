@@ -7,13 +7,12 @@
 // Gets typography map and breakpoints, for each breakpoint,
 @mixin font-size($map, $breakpoints: $grid-breakpoints) {
   @each $breakpoint, $font-size in $map {
-    // made for values that are being repeated in all breakpoints (ex: $extra-small-font-size)
+    // made for values that are being repeated in all breakpoints
     @if $breakpoint == default {
       @include make-font-size($font-size);
     }
     @else {
-      // If $font-size is a key that exists in
-      // $breakpoints, use the value
+      // if $font-size is a key that exists in $breakpoints, use the value
       @if map-has-key($breakpoints, $breakpoint) {
         $breakpoint: map-get($breakpoints, $breakpoint);
       }
@@ -24,11 +23,10 @@
   }
 }
 
-// Utility function for mixin font-size /line-height
 
+// Utility function for mixin font-size / line-height
 @mixin make-font-size($font-size) {
-  // If $font-size is a list, include
-  // font-size and line-height
+  // if $font-size is a list, include font-size and line-height
   @if type-of($font-size) == "list" {
     font-size: nth($font-size, 1);
     @if (length($font-size) > 1) {
@@ -39,6 +37,7 @@
     font-size: $font-size;
   }
 }
+
 
 // Function loop for headings h1, h2, h3, h4, h5, h6
 // provides an easy way to apply styles to all of the 6 standardised
@@ -53,12 +52,26 @@
 
 @mixin light {
   font-weight: $fw-300;
+  font-family: $font-family-light;
 }
 
 @mixin regular {
   font-weight: $fw-400;
+  font-family: $font-family-base;
 }
 
 @mixin bold {
   font-weight: $fw-700;
+  font-family: $font-family-bold;
+}
+
+
+/* --------------How to use---------------- */
+//    @include ellipsis;
+/* ---------------------------------------- */
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

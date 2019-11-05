@@ -18,16 +18,11 @@
       $size: #{nth($spacers, $i)}; // xs, sm, md, lg, xl
       $scale: #{$i - 1};  // 0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
 
-      // Set a #{$size} padding to all sides
-      .p-#{$breakpoint}-#{$scale} { padding: #{$size}; }
-      // Set a #{$size} padding to the top
-      .pt-#{$breakpoint}-#{$scale} { padding-top: #{$size}; }
-      // Set a #{$size} padding to the right
-      .pr-#{$breakpoint}-#{$scale} { padding-right: #{$size}; }
-      // Set a #{$size} padding to the bottom
-      .pb-#{$breakpoint}-#{$scale} { padding-bottom: #{$size}; }
-      // Set a #{$size} padding to the left
-      .pl-#{$breakpoint}-#{$scale} { padding-left: #{$size}; }
+      .p-#{$breakpoint}-#{$scale}  { padding: #{$size}; }         // Set a #{$size} padding to all sides
+      .pt-#{$breakpoint}-#{$scale} { padding-top: #{$size}; }     // Set a #{$size} padding to the top
+      .pr-#{$breakpoint}-#{$scale} { padding-right: #{$size}; }   // Set a #{$size} padding to the right
+      .pb-#{$breakpoint}-#{$scale} { padding-bottom: #{$size}; }  // Set a #{$size} padding to the bottom
+      .pl-#{$breakpoint}-#{$scale} { padding-left: #{$size}; }    // Set a #{$size} padding to the left
     }
   }
 }
