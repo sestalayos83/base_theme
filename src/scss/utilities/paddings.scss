@@ -10,7 +10,6 @@
 //    .pl-sm-3
 /* ---------------------------------------- */
 
-// stylelint-disable
 @each $breakpoint in map-keys($grid-breakpoints) {
 
   // Loop through the spacer values (defined in variables/_layout.scss)

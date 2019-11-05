@@ -6,8 +6,8 @@
   border: 0;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   outline: 0;
+  padding: 0;
 }
 
 html {
@@ -25,7 +25,6 @@ body {
 
 // Headings
 // --------------------------------------------------
-
 #{headings(1,6)} {
   margin-bottom: 0;
   margin-top: 0;
@@ -34,7 +33,6 @@ body {
 
 // Body text
 // --------------------------------------------------
-
 p {
   margin: 0 0 $spacer-4 0;
 
@@ -44,8 +42,8 @@ p {
 }
 
 a {
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     text-decoration: none;
@@ -59,13 +57,12 @@ blockquote {
 
 // Lists
 // --------------------------------------------------
-
 ul,
 ol {
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
   list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
 }
 
 li {
@@ -91,7 +88,6 @@ dd {
 
 // Form elements
 // --------------------------------------------------
-
 input,
 select,
 textarea,
@@ -114,13 +110,12 @@ input[type="number"] {
 
 button {
   cursor: pointer;
-  border-radius: 0; // Remove border radius added by Chroma macOS
+  border-radius: 0;
 }
 
 
 // Table
 // --------------------------------------------------
-
 table {
   border-spacing: 0;
   border-collapse: collapse;
@@ -134,7 +129,6 @@ th {
 
 // Misc
 // --------------------------------------------------
-
 details {
   summary {
     cursor: pointer;
